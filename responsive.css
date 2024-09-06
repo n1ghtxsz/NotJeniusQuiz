@@ -1,0 +1,550 @@
+@media (min-width: 1367px) {
+    div#q4>div.question>h1  {
+        width: 1200px;
+    }
+
+    div#q7>div.question>h1  {
+        width: 1200px;
+    }
+
+    div#q13>div.question>div.buttons>button  {
+        font-size: 27px;
+    }
+
+    div#q17>div.question>div.buttons>button  {
+        font-size: 28px;
+    }
+
+    div#q18>div.question>div.buttons>button  {
+        font-size: 24px;
+    }
+
+    div#q21>div.question>div.buttons>button  {
+        font-size: 27px;
+    }
+
+    div#q24>div.question>div.buttons>button  {
+        font-size: 38px;
+    }
+
+    div#q28>div.question>div.buttons>button  {
+        font-size: 30px;
+    }
+
+    div#q30>div.question>div.buttons>button  {
+        font-size: 28px;
+    }
+
+    div#q31>div.question>div.buttons>button  {
+        font-size: 28px;
+    }
+
+    div#q36>div.question>div.buttons>button  {
+        font-size: 28px;
+    }
+
+    div#q38>div.question>div.buttons>button  {
+        font-size: 32px;
+    }
+
+    div#q42>div.question>div.buttons>button  {
+        font-size: 26px;
+    }
+
+    div#q48>div.question>div.buttons>button  {
+        font-size: 32px;
+    }
+
+    div#q49>div.question>div.buttons>button  {
+        font-size: 28px;
+    }
+}
+
+/* Notebooks */
+
+@media (max-width: 1366px) {
+    div#q1>div.question>div.buttons>button  {
+        font-size: 26px;
+    }
+
+    div#q2>div.question>div.buttons>button  {
+        font-size: 24px;
+    }
+
+    div#q3>div.question>div.buttons>button  {
+        font-size: 27px;
+    }
+
+    div#q4>div.question>div.buttons>button  {
+        font-size: 28px;
+    }
+
+    div#q7>div.question>div.buttons>button  {
+        font-size: 28px;
+    }
+
+    div#q9>div.question>div.buttons>button  {
+        font-size: 28px;
+    }
+
+    div#q13>div.question>div.buttons>button  {
+        font-size: 27px;
+    }
+
+    img.brain {
+        width: 800px;
+    }
+
+    div#Devs>p>a {
+        color: red;
+        font-family: "Poppins";
+    }
+    
+    div#Devs>p>strong {
+        font-family: "Poppins";
+    }
+    
+    div#Devs {
+        display: flex;
+        right: 0;
+        left: 0;
+        margin-top: 60px;
+    }
+
+    div.play {
+        margin-top: 100px;
+    }
+
+    div#startbutton {
+        width: 350px;
+        height: 120px;
+    }
+
+    div.fail {
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+    
+    div.fail>h1 {
+        font-family: Caveat;
+        border: 3px solid grey;
+        box-shadow: 3px 3px 3px grey;
+        user-select: none;
+        font-size: 120px;  
+    }
+
+    div.fail>h1:hover {
+        cursor: pointer;
+        color: darkslateblue;
+    }
+}
+
+/* Tablets */
+
+@media (max-width: 800px) {
+    div.cent>img.brain {
+        width: 800px;
+        margin-top: 150px;
+    }
+
+    .buttons {
+        display: block;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    div#questions {
+        text-align: center;
+        margin-top: 80px;
+    }
+
+    .sla {
+        border: 3px solid grey;
+        box-shadow: 3px 3px 5px grey;
+        box-sizing: border-box;
+        border-radius: 10px;
+        max-width: fit-content;
+        justify-content: center;
+    }
+
+    .question {
+        display: block;
+        gap: 20px;
+    }
+    
+    div.question>h1 {
+        font-family: Caveat;
+        font-size: 52px;
+        margin-right: 10px;
+    }
+    
+    div.question>div.buttons>button {
+        font-family: Poppins;
+        font-size: 30px;
+        margin-top: 10px;
+    }
+
+    .custom-button {
+        background-color: white;
+        border: 10px solid #F0A500;
+        font-size: 24px;
+        color: #333;
+        font-weight: bold;
+        border-radius: 0;
+        box-shadow: inset 0 0 0 5px #A55F00;
+        border-radius: 10px;
+    }
+
+    .custom-button:hover {
+        background-color: #f5f5f5;
+    }
+}
+
+
+/* Celular */
+
+@media (max-width: 440px) {
+    
+    div.cent>img.brain {
+        width: 400px;
+        margin-top: 100px;
+    }
+
+    div#Devs>p>a {
+        color: red;
+        font-family: "Poppins";
+    }
+    
+    div#Devs>p>strong {
+        width: 30px;
+        font-family: "Poppins";
+    }
+    
+    div#Devs {
+        display: flex;
+        right: 0;
+        left: 0;
+        margin-top: 120px;
+    }
+
+    div.play {
+        margin-top: 150px;
+        flex-direction: column;
+    }
+
+    div.play>img {
+        width: 180px ;
+        height: 80px;
+    }
+
+    div#social {
+        position: fixed;
+        bottom: 60px;
+        right: 6px;
+        display: block;
+        gap: 9px;
+        width: 50px;
+        height: 150px;
+    }
+
+    div#startbutton {
+        width: 240px;
+        height: 120px;
+    }
+
+    div.fail {
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+    
+    div.fail>h1 {
+        font-family: Caveat;
+        border: 3px solid grey;
+        box-shadow: 3px 3px 3px grey;
+        user-select: none;
+        font-size: 80px;  
+    }
+
+    div.fail>h1:hover {
+        cursor: pointer;
+        color: purple;
+    }
+
+    #mensagem {
+        visibility: visible;
+    }
+
+    .mobile-first {
+        visibility: visible;
+    }
+
+    .buttons {
+        display: block;
+        gap: 10px;
+    }
+
+    div#questions {
+        text-align: center;
+        margin-top: 80px;
+    }
+
+    .sla {
+        border: 3px solid grey;
+        box-shadow: 3px 3px 5px grey;
+        box-sizing: border-box;
+        border-radius: 10px;
+        max-width: fit-content;
+        justify-content: center;
+    }
+
+    .question {
+        display: block;
+        gap: 20px;
+    }
+    
+    div.question>h1 {
+        font-family: Caveat;
+        font-size: 52px;
+        margin-right: 10px;
+    }
+    
+    div.question>div.buttons>button {
+        font-family: Poppins;
+        font-size: 30px;
+        margin-top: 10px;
+    }
+
+    .custom-button {
+        background-color: white;
+        border: 10px solid #F0A500;
+        padding: 10px 20px;
+        color: #333;
+        border-radius: 10px;
+        box-shadow: inset 0 0 0 5px #A55F00;
+        width: 300px; /* Largura fixa */
+        height: 80px; /* Altura fixa */
+        overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse os limites */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .custom-button:hover {
+        background-color: #f5f5f5;
+    }
+
+    .card {
+        display: block;
+        border: grey 3px solid;
+        width: 400px;
+        height: 1300px;
+        box-shadow: -10px 0 15px grey, 10px 0 15px grey;
+        justify-content: space-around;
+        background-color: #fff;
+        text-align: center;
+    }
+
+    .box-1 {
+        border: 3px black solid;
+        width: 300px;
+        height: 580px;
+        margin-right: 35px;
+        padding: 12px;
+        box-shadow: 3px 3px 3px grey;
+        text-align: left;
+    }
+    
+    .backbutton {
+        width: 150px;
+        height: 30px;
+        box-shadow: 3px 3px 3px grey;
+        margin-top: 5px;
+    }
+    
+    .bg-1 {
+        width: 328px;
+        background-color: darkgrey;
+        color: darkgrey;
+        margin-left: 35px;
+    }
+
+    /* Botões tamanho da fonte */
+
+    div#q1>div.question>div.buttons>button  {
+        font-size: 28px;
+    }
+
+    div#q2>div.question>div.buttons>button  {
+        font-size: 24px;
+    }
+
+    div#q3>div.question>div.buttons>button  {
+        font-size: 24px;
+    }
+
+    div#q17>div.question>div.buttons>button  {
+        font-size: 24px;
+    }
+
+    div#q18>div.question>div.buttons>button  {
+        font-size: 22px;
+    }
+
+    div#q21>div.question>div.buttons>button  {
+        font-size: 24px;
+    }
+
+    div#q30>div.question>div.buttons>button  {
+        font-size: 24px;
+    }
+
+    div#q31>div.question>div.buttons>button  {
+        font-size: 24px;
+    }
+
+    div#q42>div.question>div.buttons>button  {
+        font-size: 24px;
+    }
+
+    div#q49>div.question>div.buttons>button  {
+        font-size: 24px;
+    }
+
+    /* Botões display */
+    
+    div#q5>div.question>div.buttons>button {
+        display: block;
+    }
+
+    div#q6>div.question>div.buttons>button {
+        display: block;
+    }
+
+    div#q8>div.question>div.buttons>button {
+        display: block;
+    }
+
+    /* h1s */
+
+    div#q2>div.question>h1 {
+        font-size: 32px;
+    }
+
+    div#q4>div.question>h1 {
+        font-size: 32px;
+    }
+
+    div#q5>div.question>h1 {
+        font-size: 32px;
+    }
+
+    div#q6>div.question>h1 {
+        font-size: 32px;
+    }
+
+    div#q7>div.question>h1 {
+        font-size: 26px;
+    }
+
+    div#q8>div.question>h1 {
+        font-size: 32px;
+    }
+
+    div#q9>div.question>h1 {
+        font-size: 32px;
+    }
+
+    div#q13>div.question>h1 {
+        font-size: 46px;
+    }
+
+    div#q28>div.question>h1 {
+        font-size: 46px;
+    }
+
+    div#q30>div.question>h1 {
+        font-size: 46px;
+    }
+
+    div#q31>div.question>h1 {
+        font-size: 40px;
+    }
+
+    div#q37>div.question>h1 {
+        font-size: 46px;
+    }
+
+    div#q42>div.question>h1 {
+        font-size: 40px;
+    }
+
+    div#q43>div.question>h1 {
+        font-size: 46px;
+    }
+
+    div#q45>div.question>h1 {
+        font-size: 44px;
+    }
+
+    div#q46>div.question>h1 {
+        font-size: 44px;
+    }
+
+    div#direitoescondido {
+        margin-left: 360px;
+        font-size: 28px;
+        font-family: Jost;
+        width: 120px;
+        opacity: 0.08;
+    }
+
+    /* Imgs */
+
+    div#q14>div.question>img {
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 100px;
+    }
+
+    div#q46>div.question>img {
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 150px;
+    }
+
+    /* maracutaias */
+
+    div#q14>div.question>div.buttons {
+        margin-top: -20px;
+    }
+
+    div#q46>div.question>div.buttons {
+        margin-top: -20px;
+    }
+
+    div#thank {
+        margin: 0 auto;
+    }
+
+    /* margins */
+
+    div#q12>div.question>h1 {
+        margin: 0 auto;
+    }
+
+    div#q24>div.question>h1 {
+        margin: 0 auto;
+    }
+
+    div#q25>div.question>h1 {
+        margin: 0 auto;
+    }
+
+    div#q29>div.question>h1 {
+        margin: 0 auto;
+    }
+
+    div#q35>div.question>h1 {
+        margin: 0 auto;
+    }
+}

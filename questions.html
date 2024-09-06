@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <title>Jenius Quiz</title>
+    <link rel="icon" type="x/icon" href="images/brain.png">
+    <style>
+        body {
+            overflow: hidden;
+        }
+
+        .question-container {
+            display: none;
+        }
+
+        .question-container.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="death.js"></script>
+    <main>
+        <div id="questions">
+            <div id="q1" class="question-container active">
+                <div class="question">
+                    <h1 class="sla no-interaction">1. Quantos anos tem a terra?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp deathbutton">2024</button>
+                        <button class="custom-button buttonresp deathbutton">Milhões de anos</button>
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q1', 'q2')">Bilhões de anos</button>
+                        <button class="custom-button buttonresp deathbutton">Trilhões de anos</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q2" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">2. Quantos animais moisés colocou em sua arca?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp deathbutton">2 animais de cada espécie</button>
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q2', 'q3')">Nenhum</button>
+                        <button class="custom-button buttonresp deathbutton">Somente Insetos</button>
+                        <button class="custom-button buttonresp deathbutton">Somente animais terrestres</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q3" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">3. Quais desses dinossauros não existe?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp deathbutton">T-Rex</button>
+                        <button class="custom-button buttonresp deathbutton">Triceratops</button>
+                        <button class="custom-button buttonresp deathbutton">Velociraptor</button>
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q3', 'q4')">Nenhum destes</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q4" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">4. Existia um homem em uma casa com uma parede apontada ao norte. De repente apareceu um urso no oposto. Qual o nome do urso?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp deathbutton">Urso Marrom</button>
+                        <button class="custom-button buttonresp deathbutton">Urso Pardo</button>
+                        <button class="custom-button buttonresp deathbutton">Urso Preto</button>
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q4', 'q5')">Urso Polar</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q5" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">5. Um homem tinha 12 filhos, alguns saíram, menos 9 ficaram. Quantos filhos ficaram?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp deathbutton">3</button>
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q5', 'q6')">9</button>
+                        <button class="custom-button buttonresp deathbutton">12</button>
+                        <button class="custom-button buttonresp deathbutton">21</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q6" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">6. Em uma mesa tem 8 maças e você pega 3, com quantas você fica?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp deathbutton">5</button>
+                        <button class="custom-button buttonresp deathbutton">8</button>
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q6', 'q7')">3</button>
+                        <button class="custom-button buttonresp deathbutton">11</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q7" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">7. Existe um ônibus, você como motorista está no ônibus e neste ônibus estão João, Maria e Gabriel, eles querem chegar ao Rio De Janeiro e demora cerca de 5h, e eles jã estão á 2h do caminho. Sabendo disso, quem é você no ônibus? </h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp deathbutton">Amigo dos três</button>
+                        <button class="custom-button buttonresp deathbutton">Amigo De João</button>
+                        <button class="custom-button buttonresp deathbutton">Passageiro</button>
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q7', 'q8')">Motorista</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q8" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">8. Um homem tem 4 filhas, cada filha tem um irmão. Quantos filhos o homem tem ao todo?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp deathbutton">4</button>
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q8', 'q9')">5</button>
+                        <button class="custom-button buttonresp deathbutton">8</button>
+                        <button class="custom-button buttonresp deathbutton">9</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q9" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">9. Se um médico te der 3 comprimidos e disser para tomar um a cada meia hora, quanto tempo você terá que esperar até tomar o último comprimido? </h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q9', 'q10')">90 minutos</button>
+                        <button class="custom-button buttonresp deathbutton">60 minutos</button>
+                        <button class="custom-button buttonresp deathbutton">30 minutos</button>
+                        <button class="custom-button buttonresp deathbutton">120 minutos</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q10" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">10. Para qual lado a flecha está apontando?</h1>
+                    <img src="images/rightarrow.png">
+                    <div id="direitoescondido" onclick="showNextQuestion('q10', 'q11')">Direita</div>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp deathbutton">Esquerda</button>
+                        <button class="custom-button buttonresp deathbutton">Para Cima</button>
+                        <button class="custom-button buttonresp deathbutton">Para Baixo</button>
+                        <button class="custom-button buttonresp deathbutton">Para Trás</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q11" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">11. Ao ultrapassar o terceiro lugar. Em que posição eu fico?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q11', 'q12')">Terceiro</button>
+                        <button class="custom-button buttonresp deathbutton">Primeiro</button>
+                        <button class="custom-button buttonresp deathbutton">Quarto</button>
+                        <button class="custom-button buttonresp deathbutton">Segundo</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q12" class="question-container">
+                <div class="question">
+                    <h1 class="sla" style="display: flex;"><div class="pointer dozeq12" onclick="showNextQuestion('q12', 'q13')">12.</div>√144? </h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp deathbutton">24</button>
+                        <button class="custom-button buttonresp deathbutton">36</button>
+                        <button class="custom-button buttonresp deathbutton">8</button>
+                        <button class="custom-button buttonresp deathbutton">4</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q13" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">13. Qual a teoria mais aceita para explicar a criação do universo?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp deathbutton">Teorema</button>
+                        <button class="custom-button buttonresp deathbutton">Criacionismo</button>
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q13', 'q14')">Big Bang</button>
+                        <button class="custom-button buttonresp deathbutton">Tratado de Tordesilhas</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q14" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">14. Qual marca tem essa logo?</h1>
+                    <img src="images/ferras.png">
+                    <div class="buttons">
+                        <button class="custom-button buttonresp deathbutton">Lamborghini</button>
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q14', 'q15')">Ferrari</button>
+                        <button class="custom-button buttonresp deathbutton">Jaguar</button>
+                        <button class="custom-button buttonresp deathbutton">Wolksvagem</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q15" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">15. Quantos números primos tem entre 1 e 100?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp deathbutton">22</button>
+                        <button class="custom-button buttonresp deathbutton">23</button>
+                        <button class="custom-button buttonresp deathbutton">24</button>
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q15', 'q16')">25</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q16" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">16. Qual a cor que está na ponta da cauda do Pikachu?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp deathbutton">Roxo</button>
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q16', 'q17')">Amarelo</button>
+                        <button class="custom-button buttonresp deathbutton">Preto</button>
+                        <button class="custom-button buttonresp deathbutton">Cinza</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q17" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">17. "Bons artistas copiam, grandes artistas roubam."</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q17', 'q18')">Pablo Picasso</button>
+                        <button class="custom-button buttonresp deathbutton">Bill Gates</button>
+                        <button class="custom-button buttonresp deathbutton">Steve Trabalhos</button>
+                        <button class="custom-button buttonresp deathbutton">Everson Zóio</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q18" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">18. Qual a velocidade da luz?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp deathbutton">900.000 m/s</button>
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q18', 'q19')">1.079.252.848,8 km/h</button>
+                        <button class="custom-button buttonresp deathbutton">2.332.127.533,3 m/s</button>
+                        <button class="custom-button buttonresp deathbutton">9.343.273.652,5 km/h</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q19" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">19. Qual time não tem mundial?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q19', 'q20')">Palmeiras</button>
+                        <button class="custom-button buttonresp deathbutton">Corinthians</button>
+                        <button class="custom-button buttonresp deathbutton">São Paulo</button>
+                        <button class="custom-button buttonresp deathbutton">Santos</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q20" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">20. Melhor do mundo?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp deathbutton">Messi</button>
+                        <button class="custom-button buttonresp deathbutton">CR7</button>
+                        <button class="custom-button buttonresp deathbutton">Maradona</button>
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q20', 'q21')">Pelé</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q21" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">21. Qual foi o primeiro animal sair do planeta?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q21', 'q22')">Cachorro</button>
+                        <button class="custom-button buttonresp deathbutton">Gato</button>
+                        <button class="custom-button buttonresp deathbutton">Papagaio</button>
+                        <button class="custom-button buttonresp deathbutton">Tigre Dente de Sabre</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q22" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">22. Capital do Butão</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp deathbutton">Kabul</button>
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q22', 'q23')">Timbu</button>
+                        <button class="custom-button buttonresp deathbutton">Delhi</button>
+                        <button class="custom-button buttonresp deathbutton">Varsóvia</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q23" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">23. Qual é o menor país do mundo em área?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp deathbutton">Afeganistão</button>
+                        <button class="custom-button buttonresp deathbutton">Butão</button>
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q23', 'q24')">Vaticano</button>
+                        <button class="custom-button buttonresp deathbutton">Serra Leoa</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q24" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">24. Fez "Coisas"?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp deathbutton">Saitama</button>
+                        <button class="custom-button buttonresp deathbutton">Nicola Tesla</button>
+                        <button class="custom-button buttonresp deathbutton">Elon Musk</button>
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q24', 'q25')">K1NG</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q25" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">25. Molinésia</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q25', 'q26')">Peixe</button>
+                        <button class="custom-button buttonresp deathbutton">País</button>
+                        <button class="custom-button buttonresp deathbutton">Comida</button>
+                        <button class="custom-button buttonresp deathbutton">Arte</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q26" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">26. Qual o maior oceano do mundo?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp deathbutton">Atlântico</button>
+                        <button class="custom-button buttonresp deathbutton">Índico</button>
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q26', 'q27')">Pacífico</button>
+                        <button class="custom-button buttonresp deathbutton">Glacial</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q27" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">27. Qual a resolução conhecida por Full HD?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q27', 'q28')">1920x1080</button>
+                        <button class="custom-button buttonresp deathbutton">1280x720</button>
+                        <button class="custom-button buttonresp deathbutton">1366x768</button>
+                        <button class="custom-button buttonresp deathbutton">800x600</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q28" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">28. Qual jogo foi o ganhador do Game of The Year em 2022?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp deathbutton">RDR II</button>
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q28', 'q29')">Elden Ring</button>
+                        <button class="custom-button buttonresp deathbutton">Halo Infinite</button>
+                        <button class="custom-button buttonresp deathbutton">Baldur's Gate III</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q29" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">29. Ca</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp deathbutton">Castelo</button>
+                        <button class="custom-button buttonresp deathbutton">Cariani</button>
+                        <button class="custom-button buttonresp deathbutton">Camaleão</button>
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q29', 'q30')">Catapimba</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q30" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">30. Qual animal é conhecido por dançar na frente da fêmea?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q30', 'q31')">Cavalo-Marinho</button>
+                        <button class="custom-button buttonresp deathbutton">Axolote</button>
+                        <button class="custom-button buttonresp deathbutton">Nemo</button>
+                        <button class="custom-button buttonresp deathbutton">Professor Girafales</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q31" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">31. Com que eram iluminadas as salas antes da invenção da eletricidade?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp deathbutton">Magia Negra</button>
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q31', 'q32')">Lâmpadas de parafina</button>
+                        <button class="custom-button buttonresp deathbutton">Luz Led</button>
+                        <button class="custom-button buttonresp deathbutton">Tochas</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q32" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">32. Qual tipo de luz utlizada para ver digitais?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp deathbutton">Luz Solar</button>
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q32', 'q33')">Luz U.V</button>
+                        <button class="custom-button buttonresp deathbutton">Luz linear</button>
+                        <button class="custom-button buttonresp deathbutton">Luz Led</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q33" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">33. A Fossa oceânia mais profunda?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp deathbutton">Iguaçu</button>
+                        <button class="custom-button buttonresp deathbutton">Fuji</button>
+                        <button class="custom-button buttonresp deathbutton">Niagara</button>
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q33', 'q34')">Mariana</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q34" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">34. Qual não é uma linguagem de programação?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q34', 'q35')">HTML</button>
+                        <button class="custom-button buttonresp deathbutton">Assembly</button>
+                        <button class="custom-button buttonresp deathbutton">Ruby</button>
+                        <button class="custom-button buttonresp deathbutton">Lua</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q35" class="question-container">
+                <div class="question">
+                    <h1 class="sla" style="display: flex;"><div class="pointer dozeq12" onclick="showNextQuestion('q35', 'q36')">35.</div> 10 + 10/2 * 5</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp deathbutton">25</button>
+                        <button class="custom-button buttonresp deathbutton">10</button>
+                        <button class="custom-button buttonresp deathbutton">20</button>
+                        <button class="custom-button buttonresp deathbutton">50</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q36" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">36. O Que faz parte de um tanque britânico?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp deathbutton">Assentos Aquecidos</button>
+                        <button class="custom-button buttonresp deathbutton">Desfibrilador</button>
+                        <button class="custom-button buttonresp deathbutton">TV</button>
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q36', 'q37')">Serviço de Chá</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q37" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">37. Com que idade se inicia a escolaridade nos EUA?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp deathbutton">7</button>
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q37', 'q38')">6</button>
+                        <button class="custom-button buttonresp deathbutton">5</button>
+                        <button class="custom-button buttonresp deathbutton">8</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q38" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">38. Quantas vezes por dia um relógio parado está certo?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp deathbutton">Três Vezes</button>
+                        <button class="custom-button buttonresp deathbutton">Doze Vezes</button>
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q38', 'q39')">Duas Vezes</button>
+                        <button class="custom-button buttonresp deathbutton">Cinco Vezes</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q39" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">39. A Arte japonesa de dobrar papel é conhecida como?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q39', 'q40')">Origami</button>
+                        <button class="custom-button buttonresp deathbutton">Koshiniwa</button>
+                        <button class="custom-button buttonresp deathbutton">Neburino</button>
+                        <button class="custom-button buttonresp deathbutton">Wabi-sabi</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q40" class="question-container">
+                <div class="question">
+                    <h1 class="sla" style="display: flex;"><div class="pointer dozeq12" onclick="showNextQuestion('q40', 'q41')">39.</div> Qual o número da questão anterior?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp deathbutton">38</button>
+                        <button class="custom-button buttonresp deathbutton">40</button>
+                        <button class="custom-button buttonresp deathbutton">37</button>
+                        <button class="custom-button buttonresp deathbutton">36</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q41" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">41. No Hino nacional, qual é a 10ª palavra?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp deathbutton">Retumbante</button>
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q41', 'q42')">Heróico</button>
+                        <button class="custom-button buttonresp deathbutton">Liberdade</button>
+                        <button class="custom-button buttonresp deathbutton">Povo</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q42" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">42. Que simbolo nacional é comum ao País de Gales e á China?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp deathbutton">Trevo</button>
+                        <button class="custom-button buttonresp deathbutton">Canário</button>
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q42', 'q43')">Dragão Vermelho</button>
+                        <button class="custom-button buttonresp deathbutton">Harpa</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q43" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">43. Contra quem foi o primeiro jogo do Brasil na copa em 2002?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q43', 'q44')">Turquia</button>
+                        <button class="custom-button buttonresp deathbutton">Alemanha</button>
+                        <button class="custom-button buttonresp deathbutton">Holanda</button>
+                        <button class="custom-button buttonresp deathbutton">Inglaterra</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q44" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">?. O número da questão?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp deathbutton">41</button>
+                        <button class="custom-button buttonresp deathbutton">43</button>
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q44', 'q45')">44</button>
+                        <button class="custom-button buttonresp deathbutton">45</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q45" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">45. Qual é a idade da pessoa que desenvolveu um sabonete que trata câncer de pele?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q45', 'q46')">14</button>
+                        <button class="custom-button buttonresp deathbutton">18</button>
+                        <button class="custom-button buttonresp deathbutton">36</button>
+                        <button class="custom-button buttonresp deathbutton">48</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q46" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">46. A que país pertence essa bandeira?</h1>
+                    <img src="images/Flag_of_Bangladesh.svg.png">
+                    <div class="buttons">
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q46', 'q47')">Blangadesh</button>
+                        <button class="custom-button buttonresp deathbutton">Butão</button>
+                        <button class="custom-button buttonresp deathbutton">Paquistão</button>
+                        <button class="custom-button buttonresp deathbutton">Maldivas</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q47" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">47. Qual console é mais antigo?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp deathbutton">Atari</button>
+                        <button class="custom-button buttonresp deathbutton">Mega Drive</button>
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q47', 'q48')">Magnavox</button>
+                        <button class="custom-button buttonresp deathbutton">Nin64</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q48" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">48. "Luke, eu sou seu pai"</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp deathbutton">Skywalker</button>
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q48', 'q49')">Darth Vader</button>
+                        <button class="custom-button buttonresp deathbutton">Ben 10</button>
+                        <button class="custom-button buttonresp deathbutton">Thunder Cat</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q49" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">49. Quem é o mais forte entre os sigmas?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q49', 'q50')">Sigma da Bahia</button>
+                        <button class="custom-button buttonresp deathbutton">Sigma do Acre</button>
+                        <button class="custom-button buttonresp deathbutton">Sigma do Ceará</button>
+                        <button class="custom-button buttonresp deathbutton">Sigma do Pará</button>
+                    </div>
+                </div>
+            </div>
+            <div id="q50" class="question-container">
+                <div class="question">
+                    <h1 class="sla no-interaction">50. Quantas opções de respostas tem nesse quiz?</h1>
+                    <div class="buttons">
+                        <button class="custom-button buttonresp deathbutton">57</button>
+                        <button class="custom-button buttonresp deathbutton">128</button>
+                        <button class="custom-button buttonresp deathbutton">62</button>
+                        <button class="custom-button buttonresp rightbutton" onclick="showNextQuestion('q50', 'finish')">204</button>
+                    </div>
+                </div>
+            </div>
+            <div id="finish" class="question-container" style="margin-top: -100px;">
+                <div class="question">
+                    <h1 class="sla no-interaction">Parabéns, Você conseguiu completar o quiz, você deve ter uma boa força de vontade e determinação. Aqui nossa gratidão</h1>
+                    <a href="index.html"><img class="pointer heart" src="images/heart.png"></a>
+                    <h1 id="thank">Obrigado pela paciência!.</h1>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="Devs" class="right">
+            <p class="no-interaction">
+                Todos os direitos reservados <strong>@Newtral Studios</strong>
+            </p>
+        </div>
+    </footer>
+    <script src="questdeath.js"></script>
+</body>
+
+</html>

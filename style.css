@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Caveat:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body {
+    font-family: "Roboto", "Poppins", "Caveat", sans-serif;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+h5 {
+    font-family: Caveat;
+}
+
+
+.button {
+    box-shadow: 2px 2px 2px grey;
+    color: aqua;
+}
+
+.button:hover {
+    color: green;
+    transition: 0.5s;
+    cursor: pointer;
+    filter: opacity(0.8);
+    outline: medium darkblue solid;
+}
+
+.cent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    height: 120px;
+    gap: 20px;
+}
+
+.brain {
+    margin-top: 50px;
+}
+
+div#Devs>p>a {
+    color: red;
+    font-family: "Poppins";
+}
+
+div#Devs>p>strong {
+    font-family: "Poppins";
+}
+
+div#Devs {
+    display: flex;
+    right: 0;
+    left: 0;
+    margin-top: 100px;
+}
+
+.no-interaction {
+    pointer-events: none;
+    cursor: default;
+    outline: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+:root {
+    --color-primary: #455C7B;
+    --color-secondary: #685C79;
+    --color-tertiary: #AC6C82;
+    --color-special-01: #DA727E;
+    --color-special-03: #FFBC67;
+    --color-dark: #000;
+    --color-light: #fff;
+}
+
+body.loading {
+    overflow: hidden;
+}
+
+.card {
+    display: block;
+    border: grey 3px solid;
+    width: 800px;
+    height: 940px;
+    box-shadow: -10px 0 15px grey, 10px 0 15px grey;
+    justify-content: space-around;
+    background-color: #fff;
+    text-align: center;
+}
+
+.question {
+    display: block;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+div.question>h1 {
+    font-family: Caveat;
+    font-size: 52px;
+}
+
+div.question>div.buttons>button {
+    font-family: Poppins;
+    font-size: 40px;
+}
+
+.custom-button {
+    background-color: white;
+    border: 10px solid #F0A500;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 5px #A55F00;
+    width: 300px; /* Largura fixa */
+    height: 80px; /* Altura fixa */
+    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse os limites */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.custom-button:hover {
+    background-color: #f5f5f5;
+}
+
+div#questions {
+    text-align: center;
+    margin-top: 200px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    padding: 40px;
+}
+
+.right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.sla {
+    border: 3px solid grey;
+    box-shadow: 3px 3px 5px grey;
+    box-sizing: border-box;
+    border-radius: 10px;
+    max-width: fit-content;
+    margin: 0 auto;
+}
+
+div.question>img {
+    display: flex;
+}
+
+.buttonresp {
+    box-shadow: 2px 2px 2px grey;
+    color: black;
+}
+
+.buttonresp:hover {
+    color: black;
+    transition: 0.2s;
+    cursor: pointer;
+    filter: opacity(0.8);
+    outline: medium grey solid;
+}
+
+div.fail {
+    margin: 0 auto;
+}
+
+div.fail>h1 {
+    font-family: Caveat;
+    font-size: 150px;
+    border: 3px solid grey;
+    box-shadow: 3px 3px 3px grey;
+    user-select: none;
+}
+
+div.fail>h1:hover {
+    cursor: pointer;
+    color: darkgreen;
+}
+
+footer {
+    display: flex;
+}
+
+div#social {
+    position: fixed;
+    bottom: 10px;
+    right: 25px;
+    display: flex;
+    gap: 9px;
+    width: 150px;
+    height: 50px;
+}
+
+#mensagem {
+    visibility: hidden;
+    margin-top: 50px;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 24px;
+}
+
+.mobile-first {
+    text-align: center;
+    visibility: hidden;
+}
+
+div#q10>div.question>img {
+    width: 150px;
+    height: 90px;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+div#q14>div.question>img {
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+div#q46>div.question>img {
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+div#finish>div.question>img {
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+div#finish>div.question>h1 {
+    width: 600px;
+}
+
+div#direitoescondido {
+    margin-left: 360px;
+    font-size: 28px;
+    font-family: Jost;
+    width: 120px;
+    opacity: 0;
+}
+
+div#direitoescondido:hover {
+    opacity: 1;
+    cursor: pointer;
+    border: 8px solid black;
+    background-color: purple;
+    color: white;
+    border-radius: 50%;
+}
+
+.pointer:hover {
+    cursor: pointer;
+}
+
+.dozeq12:hover {
+    font-size: 60px;
+    border: 6px black solid;
+    border-radius: 50%;
+    background-color: lightgrey;
+}
+
+div#q10>div.question>div.buttons {
+    margin-bottom: 2000px;
+}
+
+/* Personalização das perguntas */
+
+div#q1>div.question>div.buttons>button  {
+    font-size: 28px;
+}
+
+div#q2>div.question>div.buttons>button  {
+    font-size: 24px;
+}
+
+div#q3>div.question>div.buttons>button  {
+    font-size: 27px;
+}
+
+div#q4>div.question>div.buttons>button  {
+    font-size: 28px;
+}
+
+div#q7>div.question>div.buttons>button  {
+    font-size: 28px;
+}
+
+div#q9>div.question>div.buttons>button  {
+    font-size: 28px;
+}
+
+.box-1 {
+    border: 3px black solid;
+    width: 700px;
+    height: 400px;
+    margin-left: 35px;
+    padding: 12px;
+    box-shadow: 3px 3px 3px grey;
+    text-align: left;
+}
+
+.backbutton {
+    width: 150px;
+    height: 30px;
+    box-shadow: 3px 3px 3px grey;
+    margin-top: 5px;
+}
+
+.bg-1 {
+    width: 728px;
+    background-color: darkgrey;
+    color: darkgrey;
+    margin-left: 35px;
+}
+
+.heart:hover {
+    outline: 3px solid darkblue;
+}
+
+.heart {
+    margin-top: 10px;
+}
