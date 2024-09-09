@@ -23,21 +23,20 @@ function showNextQuestion(idAtual, idNovo) {
 
 // Verifica o estado da pergunta atual quando a página é carregada
 window.addEventListener('load', function() {
-    // Verifica se a página atual é a 'deathscreen'
+    // Se a página atual for a 'deathscreen', ao voltar, redireciona para a primeira questão
     if (window.location.pathname.includes("deathscreen.html")) {
-        // Ao voltar da tela de morte, redireciona para a primeira pergunta
-        window.history.replaceState(null, "", "questions.html"); // Troca a URL
-        localStorage.removeItem('currentQuestion'); // Reseta o estado da questão
-        window.location.href = "questions.html"; // Redireciona para a primeira questão
+        window.history.replaceState(null, "", "questions.html");
+        localStorage.removeItem('currentQuestion');
+        window.location.href = "questions.html";
     } else {
-        // Obtém a última questão armazenada
+        // Obtém a última questão armazenada ou vai para a primeira questão
         const currentQuestion = localStorage.getItem('currentQuestion') || 'q1';
-        // Mostra a primeira pergunta se não tiver nada no localStorage
+        // Mostra a pergunta correta
         showNextQuestion('q0', currentQuestion);
     }
 });
 
-window.history.pushState(null, null, window.location.href);
+// Impede que o usuário use o botão voltar do navegador para retornar à pergunta anterior
 window.onpopstate = function () {
-    window.history.go(1);
+    window.location.href = "questions.html"; // Redireciona sempre para a primeira questão
 };
