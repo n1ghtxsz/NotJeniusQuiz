@@ -21,22 +21,28 @@ function showNextQuestion(idAtual, idNovo) {
     localStorage.setItem('currentQuestion', idNovo);
 }
 
-// Verifica o estado da pergunta atual quando a página é carregada
 window.addEventListener('load', function() {
-    // Se a página atual for a 'deathscreen', ao voltar, redireciona para a primeira questão
-    if (window.location.pathname.includes("deathscreen.html")) {
-        window.history.replaceState(null, "", "questions.html");
-        localStorage.removeItem('currentQuestion');
-        window.location.href = "questions.html";
-    } else {
-        // Obtém a última questão armazenada ou vai para a primeira questão
-        const currentQuestion = localStorage.getItem('currentQuestion') || 'q1';
-        // Mostra a pergunta correta
-        showNextQuestion('q0', currentQuestion);
+    // Se o usuário está na página de perguntas
+    if (window.location.pathname.includes("questions.html")) {
+        const previousQuestion = localStorage.getItem('currentQuestion');
+        if (!previousQuestion || performance.navigation.type === performance.navigation.TYPE_BACK_FORWARD) {
+            // Se não houver questão salva ou o usuário voltou usando o botão "voltar"
+            localStorage.removeItem('currentQuestion'); // Reseta o progresso
+            showNextQuestion('q1'); // Volta para a questão 1
+        } else {
+            // Carrega a última pergunta armazenada
+            showNextQuestion('q0', previousQuestion);
+        }
     }
 });
 
-// Impede que o usuário use o botão voltar do navegador para retornar à pergunta anterior
+// Captura o evento de voltar do navegador
 window.onpopstate = function () {
-    window.location.href = "questions.html"; // Redireciona sempre para a primeira questão
+    if (window.location.pathname.includes("questions.html")) {
+        localStorage.removeItem('currentQuestion'); // Limpa o progresso
+        window.location.reload(); // Recarrega a página para reiniciar as questões
+    }
 };
+
+// Empurra um novo estado de histórico para a pilha
+window.history.pushState(null, null, window.location.href);

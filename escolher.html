@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.css">
+    <title>Jenius Quiz</title>
+    <style>
+        .center {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tamanho {
+            width: 800px;
+            height: 940px;
+        }
+
+        .button {
+            color: aqua;
+        }
+
+        .button:hover {
+            color: green;
+            transition: 0.5s;
+            cursor: pointer;
+            filter: opacity(0.8);
+            outline: medium darkblue solid;
+        }
+
+        .no-interaction {
+            pointer-events: none;
+            cursor: default;
+            outline: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <main class="row">
+            <div class="row">
+                <div class="shadow-lg bg position-relative tamanho border border-light mx-auto mt-2">
+                    <h1 class="text-center mt-5">Qual Jenius você quer jogar?</h1>
+                    <div class="col-lg-2 col-md-2 col-sm-2 d-flex gap-5 mt-5 mx-auto justify-content-center">
+                        <img id="jenius1" src="images/brain.png" width="300px" height="200px" class="button">
+                        <img id="jenius2" src="images/brain_red.png" width="300px" height="200px" class="button">
+                    </div>
+                    <div id="Devs" class="" style="margin-top: 550px;">
+                        <p class="no-interaction">
+                            Todos os direitos reservados <strong>@Newtral Studios</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        document.getElementById('jenius1').addEventListener('click', function() {
+        window.location.href = "index.html";
+        });
+    </script>
+</body>
+</html>

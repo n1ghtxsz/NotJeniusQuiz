@@ -91,6 +91,10 @@
         font-size: 27px;
     }
 
+    div#q39>div.question>div.buttons>button  {
+        font-size: 27px;
+    }
+
     img.brain {
         width: 800px;
     }
